@@ -14,10 +14,10 @@ class Liberary():
         print(f"Added {book} to the Book List")
 
     def LendBook(self, book , name):
+        if book not in self.BookList:
+            print("We dont have this book in the Library , use Display Books option to see which books we have right now")
         if book not in self.lendDictionary.keys():
-            print("We dont have this book in library right now , please use Display Books option to see the List of Books")
-            if book in self.lendDictionary.keys():
-                print("We have updated our Database , Please take the book")
+                print(f"{name}We have updated our Database , Please take the book")
         else:
             print(f"The Book is already owner by {self.lendDictionary[book]}")
     
