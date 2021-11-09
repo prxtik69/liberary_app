@@ -16,7 +16,6 @@ class Liberary():
     def LendBook(self, book , name):
         if book not in self.lendDictionary.keys():
             print("We dont have this book in library right now , please use Display Books option to see the List of Books")
-            # self.lendDictionary.update({book: name})
             print("We have updated our Database , Please take the book")
         else:
             print(f"The Book is already owner by {self.lendDictionary[book]}")
